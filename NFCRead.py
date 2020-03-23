@@ -19,7 +19,7 @@ while True:
         for x in ndef_records:
             tagData = tagData + x + " "
 
-        sendPost(tagData)
+        REST.sendPost(tagData)
 
     except nxppy.SelectError:
         # SelectError is raised if no card is in the field.
