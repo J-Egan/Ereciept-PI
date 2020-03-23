@@ -11,6 +11,7 @@ while True:
         uid = mifare.select()
         print(uid)
         ndef_data = mifare.read_ndef()
+        print(ndef_data)
         # Parse NDEF data
         ndef_records = list(ndef.message_decoder(ndef_data))
 
