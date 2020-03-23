@@ -20,6 +20,7 @@ while True:
             print(x)
             tagData = tagData + str(x.data) + " "
 
+        print(tagData)
         REST.sendPost(tagData)
 
     except nxppy.SelectError:
