@@ -17,7 +17,7 @@ while True:
         tagData = "UID: " + uid + " | NDEF: "
 
         for x in ndef_records:
-            tagData = tagData + x + " "
+            tagData = tagData + str(x) + " "
 
         REST.sendPost(tagData)
 
