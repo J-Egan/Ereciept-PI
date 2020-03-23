@@ -14,7 +14,7 @@ while True:
         # Parse NDEF data
         ndef_records = list(ndef.message_decoder(ndef_data))
 
-        tagData = "UID: " + uid + "NDEF: "
+        tagData = "UID: " + uid + " | NDEF: "
 
         for x in ndef_records:
             tagData = tagData + x + " "
