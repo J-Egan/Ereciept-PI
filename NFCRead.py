@@ -9,7 +9,7 @@ mifare = nxppy.Mifare()
 while True:
     try:
         uid = mifare.select()
-
+        print(uid)
         ndef_data = mifare.read_ndef()
         # Parse NDEF data
         ndef_records = list(ndef.message_decoder(ndef_data))
@@ -17,6 +17,7 @@ while True:
         tagData = "UID: " + uid + " | NDEF: "
 
         for x in ndef_records:
+            print(x)
             tagData = tagData + str(x) + " "
 
         REST.sendPost(tagData)
