@@ -19,7 +19,7 @@ while True:
 
         for x in ndef_records:
             print(x)
-            tagData = tagData + " | NDEF: " x.text + " "
+            tagData = tagData + " | NDEF: " + x.text + " "
 
         print(tagData)
         REST.sendPost(tagData)
