@@ -15,11 +15,11 @@ while True:
         # Parse NDEF data
         ndef_records = list(ndef.message_decoder(ndef_data))
 
-        tagData = "UID: " + uid + " | NDEF: "
+        tagData = "UID: " + uid
 
         for x in ndef_records:
             print(x)
-            tagData = tagData + x.text + " "
+            tagData = tagData + " | NDEF: " x.text + " "
 
         print(tagData)
         REST.sendPost(tagData)
