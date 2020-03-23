@@ -1,6 +1,6 @@
 import requests
 
-URL = "http://54.93.224.148/TAG"
+URL = "54.93.224.148/TAG/upload"
 
 tagData = "This is a test from pi"
 
