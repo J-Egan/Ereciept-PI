@@ -18,3 +18,4 @@ while True:
             print(userID)
         else:
             print("No UserID detected!")
+    time.sleep(3)
