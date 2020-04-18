@@ -16,9 +16,5 @@ while True:
             startOf = line.find("userID")
             userID = line[startOf:]
             print(userID)
-
-            # Kill subprocess now
-            os.killpg(os.getpgid(process.pid), signal.SIGTERM)
         else:
             print("No UserID detected!")
-    time.sleep(5)
