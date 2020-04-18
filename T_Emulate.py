@@ -5,7 +5,9 @@ import subprocess
 process = subprocess.Popen(['explorenfc-cardemulation'],stdout=subprocess.PIPE, universal_newlines=True)
 
 while True:
-    line = process.stdout.readline()
+    print(process.poll())
+    line = process.poll()
+    # line = process.stdout.readline()
     print(line)
     if "userID:" in line:
         startOf = line.find("userID")
