@@ -10,6 +10,7 @@ while True:
     # line = process.stdout.readline()
     if status is not None:
         line = process.stdout.read()
+        print(line)
         if "userID:" in line:
             startOf = line.find("userID")
             userID = line[startOf:]
