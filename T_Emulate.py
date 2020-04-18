@@ -6,11 +6,10 @@ import time
 process = subprocess.Popen(['explorenfc-cardemulation', '-u'],stdout=subprocess.PIPE, universal_newlines=True)
 
 while True:
-    print(process.poll())
-    line = process.poll()
+    status = process.poll()
     # line = process.stdout.readline()
-    print(line)
-    if line is not None:
+    if status is not None:
+        line = process.stdout.read()
         if "userID:" in line:
             startOf = line.find("userID")
             userID = line[startOf:]
