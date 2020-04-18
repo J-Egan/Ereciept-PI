@@ -7,6 +7,7 @@ process = subprocess.Popen(['./nfc-emulate', '-u'],stdout=subprocess.PIPE, unive
 
 while True:
     status = process.poll()
+    print(status)
     # line = process.stdout.readline()
     if status is not None:
         line = process.stdout.read()
