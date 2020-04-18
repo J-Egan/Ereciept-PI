@@ -13,9 +13,10 @@ while True:
         line = process.stdout.read()
         print(line)
         if "userID:" in line:
-            startOf = line.find("userID")
-            userID = line[startOf:]
+            startOf = line.find(":")
+            userID = line[startOf+1:]
             print(userID)
+            exit()
         else:
             print("No UserID detected!")
     time.sleep(3)
