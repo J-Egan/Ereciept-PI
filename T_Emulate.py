@@ -3,7 +3,7 @@ import signal
 import subprocess
 import time
 
-process = subprocess.Popen(['explorenfc-cardemulation', '-u'],stdout=subprocess.PIPE, universal_newlines=True)
+process = subprocess.Popen(['nfc-emulate', '-u'],stdout=subprocess.PIPE, universal_newlines=True)
 
 while True:
     status = process.poll()
