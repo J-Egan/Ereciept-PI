@@ -1,6 +1,7 @@
 import os
 import signal
 import subprocess
+import time
 
 process = subprocess.Popen(['explorenfc-cardemulation', '-u'],stdout=subprocess.PIPE, universal_newlines=True)
 
@@ -19,3 +20,4 @@ while True:
             os.killpg(os.getpgid(process.pid), signal.SIGTERM)
         else:
             print("No UserID detected!")
+    time.sleep(5)
