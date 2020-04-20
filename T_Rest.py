@@ -6,7 +6,7 @@ while True:
     if r.status_code == 200:
         data = r.json()
         recipetID = data['recieptID']
-        print("Reciept Available: " + recipetID )
+        REST.linkReciept(1, recipetID)
     else:
         print("No reciepts availble")
     time.sleep(5)

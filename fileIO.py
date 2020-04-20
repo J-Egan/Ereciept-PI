@@ -1,5 +1,5 @@
-def getREF():
-    f = open("ref.txt","r")
-    refData = f.readline()
+def getContents(fileName):
+    f = open(fileName, "r")
+    data = f.readline()
     f.close()
-    return refData
+    return data

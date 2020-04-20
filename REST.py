@@ -8,10 +8,15 @@ def sendPost(tagData):
     requests.post(url = URL, data = PARAMS)
 
 def checkTranmission():
-    PIREF = fileIO.getREF()
-    URL="http://192.168.1.10/EReciept/index.php/pos/checkTransmission"
+    PIREF = fileIO.getContents("ref.txt")
+    URL= fileIO.getContents("url_CheckTransmission.txt")
     PARAMS = {'id':PIREF}
     r = requests.get(URL, PARAMS)
-    print(r.url)
-    print(r)
     return r
+
+def linkReciept(userID, recieptID):
+    URL= fileIO.getContents("url_LinkReciept.txt")
+    PARAMS = {'userID': userID,
+              'recieptID': recieptID}
+    # Send POST request to webservice
+    requests.post(URL, PARAMS)
