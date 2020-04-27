@@ -1,1 +1,1 @@
-http://192.168.1.10/EReciept/index.php/pos/linkReciept
+http://54.93.224.148/pos/linkReciept
